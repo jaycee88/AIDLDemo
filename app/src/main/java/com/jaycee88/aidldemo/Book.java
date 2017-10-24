@@ -28,6 +28,13 @@ public class Book implements Parcelable {
         dest.writeString(name);
     }
 
+    // 手动实现这个方法
+    public void readFromParcel(Parcel dest) {
+        // 注意，这里的读取顺序要和writeToParcel()方法中的写入顺序一致
+        id = dest.readInt();
+        name = dest.readString();
+    }
+
     @Override
     public int describeContents() {
         return 0;

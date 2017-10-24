@@ -22,7 +22,11 @@
 
         <service
             android:name=".service.BookManagerService"
-            android:process=":remote" />
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="action.jaycee88.ipc" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
